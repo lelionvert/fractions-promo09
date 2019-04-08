@@ -7,8 +7,6 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        if (fraction.numerator == 0)
-            return this;
         return new Fraction(this.numerator + fraction.numerator, 1);
     }
 
