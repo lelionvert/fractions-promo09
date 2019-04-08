@@ -4,7 +4,7 @@ import org.junit.Test;
 public class PlusFractionTests {
 
     @Test
-    public void test() {
+    public void JordansContribution() {
         Assert.assertTrue(true);
     }
 
