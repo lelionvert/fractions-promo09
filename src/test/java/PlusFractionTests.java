@@ -37,4 +37,14 @@ public class PlusFractionTests {
         Assert.assertEquals(fraction, result);
 
     }
+
+    @Test
+    public void integer_plus_integer() {
+        Fraction fraction = new Fraction(1, 1);
+        Fraction expected = new Fraction(2, 1);
+
+        Fraction result = fraction.add(fraction);
+
+        Assert.assertEquals(expected, result);
+    }
 }

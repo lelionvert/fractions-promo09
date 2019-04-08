@@ -9,7 +9,19 @@ public class Fraction {
     public Fraction add(Fraction fraction) {
         if (fraction.numerator == 0)
             return this;
+        return new Fraction(this.numerator + fraction.numerator, 1);
+    }
 
-        return fraction;
+    @Override
+    public boolean equals(Object obj) {
+        Fraction fraction = (Fraction) obj;
+        return this.numerator == fraction.numerator;
+    }
+
+    @Override
+    public String toString() {
+        return "Fraction{" +
+                "numerator=" + numerator +
+                '}';
     }
 }
