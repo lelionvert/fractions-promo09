@@ -26,4 +26,15 @@ public class PlusFractionTests {
 
         Assert.assertEquals(fraction, result);
     }
+
+    @Test
+    public void fraction_plus_zero() {
+        Fraction fractionZero = new Fraction(0, 1);
+        Fraction fraction = new Fraction(1, 1);
+
+        Fraction result = fraction.add(fractionZero);
+
+        Assert.assertEquals(fraction, result);
+
+    }
 }
