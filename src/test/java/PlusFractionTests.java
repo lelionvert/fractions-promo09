@@ -1,11 +1,13 @@
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PlusFractionTests {
 
     @Test
     public void jordan_s_contribution() {
-        Assert.assertTrue(true);
+        assertTrue(true);
     }
 
     @Test
@@ -14,7 +16,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fractionZero);
 
-        Assert.assertEquals(fractionZero.getNumerator(), result.getNumerator());
+        assertEquals(fractionZero.getNumerator(), result.getNumerator());
     }
 
     @Test
@@ -24,7 +26,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fraction);
 
-        Assert.assertEquals(fraction.getNumerator(), result.getNumerator());
+        assertEquals(fraction.getNumerator(), result.getNumerator());
     }
 
     @Test
@@ -34,7 +36,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        Assert.assertEquals(fraction.getNumerator(), result.getNumerator());
+        assertEquals(fraction.getNumerator(), result.getNumerator());
     }
 
     @Test
@@ -44,7 +46,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 1);
-        Assert.assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected.getNumerator(), result.getNumerator());
     }
 
     @Test
@@ -54,8 +56,8 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 3);
-        Assert.assertEquals(expected.getNumerator(), result.getNumerator());
-        Assert.assertEquals(expected.getDenominator(), result.getDenominator());
+        assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected.getDenominator(), result.getDenominator());
     }
 
     @Test
@@ -65,7 +67,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        Assert.assertEquals(fraction, result);
+        assertEquals(fraction, result);
     }
 
     @Test
@@ -75,6 +77,19 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fraction);
 
-        Assert.assertEquals(fraction, result);
+        assertEquals(fraction, result);
     }
+
+    @Test
+    public void fraction_plus_fraction_with_different_denominator() {
+        Fraction fraction1 = new Fraction(1, 2);
+        Fraction fraction2 = new Fraction(1, 3);
+
+        Fraction result = fraction1.add(fraction2);
+
+        Fraction expected = new Fraction(5, 6);
+        assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected.getDenominator(), result.getDenominator());
+    }
+
 }
