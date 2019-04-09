@@ -47,4 +47,16 @@ public class PlusFractionTests {
 
         Assert.assertEquals(expected, result);
     }
+
+    @Test
+    public void fraction_plus_fraction_with_same_denominator() {
+        // Arrange
+        Fraction fraction = new Fraction(1, 3);
+        Fraction expected = new Fraction(2, 3);
+
+        //Act
+        Fraction result = fraction.add(fraction);
+        //Assert
+        Assert.assertEquals(expected, result);
+    }
 }
