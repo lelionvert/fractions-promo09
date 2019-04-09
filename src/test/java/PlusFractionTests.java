@@ -109,7 +109,6 @@ public class PlusFractionTests {
         Fraction fraction = new Fraction(2, 6);
 
         Fraction expected = new Fraction(1, 3);
-
         assertEquals(expected.getNumerator(), fraction.getNumerator());
         assertEquals(expected.getDenominator(), fraction.getDenominator());
     }

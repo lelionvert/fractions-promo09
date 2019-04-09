@@ -5,12 +5,8 @@ public class Fraction {
 
     Fraction(int numerator, int denominator) {
         int gcd = GCD.compute(numerator, denominator);
-        if (gcd != 1) {
-            numerator = numerator / gcd;
-            denominator = denominator / gcd;
-        }
-        this.numerator = numerator;
-        this.denominator = denominator;
+        this.numerator = numerator / gcd;
+        this.denominator = denominator / gcd;
     }
 
     Fraction add(Fraction fraction) {
