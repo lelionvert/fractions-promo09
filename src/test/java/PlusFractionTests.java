@@ -112,4 +112,15 @@ public class PlusFractionTests {
         assertEquals(expected.getNumerator(), fraction.getNumerator());
         assertEquals(expected.getDenominator(), fraction.getDenominator());
     }
+
+    @Test
+    public void simplify_fraction_plus_fraction() {
+        Fraction fraction = new Fraction(7, 2);
+
+        Fraction result = fraction.add(fraction);
+
+        Fraction expected = new Fraction(7, 1);
+        assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected.getDenominator(), result.getDenominator());
+    }
 }
