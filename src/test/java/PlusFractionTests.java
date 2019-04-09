@@ -104,5 +104,13 @@ public class PlusFractionTests {
         assertEquals(expected.getDenominator(), result.getDenominator());
     }
 
+    @Test
+    public void simplify() {
+        Fraction fraction = new Fraction(2, 6);
 
+        Fraction expected = new Fraction(1, 3);
+
+        assertEquals(expected.getNumerator(), fraction.getNumerator());
+        assertEquals(expected.getDenominator(), fraction.getDenominator());
+    }
 }
