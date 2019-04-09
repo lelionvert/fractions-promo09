@@ -67,4 +67,14 @@ public class PlusFractionTests {
 
         Assert.assertEquals(fraction, result);
     }
+
+    @Test
+    public void zero_plus_fraction() {
+        Fraction fraction = new Fraction(7, 8);
+        Fraction fractionZero = new Fraction(0, 1);
+
+        Fraction result = fractionZero.add(fraction);
+
+        Assert.assertEquals(fraction, result);
+    }
 }

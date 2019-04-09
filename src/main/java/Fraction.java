@@ -11,6 +11,9 @@ public class Fraction {
     Fraction add(Fraction fraction) {
         if (fraction.numerator == 0)
             return this;
+        if (this.numerator == 0)
+            return fraction;
+
 
         return new Fraction(this.numerator + fraction.numerator, this.denominator);
     }
