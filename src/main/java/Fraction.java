@@ -16,7 +16,9 @@ public class Fraction {
             return fraction;
         }
         if (this.denominator != fraction.denominator) {
-            return new Fraction(this.numerator * fraction.denominator + this.denominator * fraction.numerator, this.denominator * fraction.denominator);
+            int numerator = this.numerator * fraction.denominator + this.denominator * fraction.numerator;
+            int denominator = this.denominator * fraction.denominator;
+            return new Fraction(numerator, denominator);
         }
         return new Fraction(this.numerator + fraction.numerator, this.denominator);
     }
