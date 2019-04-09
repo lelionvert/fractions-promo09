@@ -57,4 +57,15 @@ public class PlusFractionTests {
         Assert.assertEquals(expected.getNumerator(), result.getNumerator());
         Assert.assertEquals(expected.getDenominator(), result.getDenominator());
     }
+
+    @Test
+    public void fraction_plus_zero() {
+        Fraction fraction = new Fraction(7, 8);
+        Fraction fractionZero = new Fraction(0, 1);
+
+        Fraction result = fraction.add(fractionZero);
+
+        Assert.assertEquals(fraction, result);
+
+    }
 }
