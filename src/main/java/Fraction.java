@@ -3,7 +3,7 @@ public class Fraction {
     private final int numerator;
     private final int denominator;
 
-    public Fraction(int numerator, int denominator) {
+    Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -29,11 +29,11 @@ public class Fraction {
                 '}';
     }
 
-    public int getNumerator() {
+    int getNumerator() {
         return this.numerator;
     }
 
-    public int getDenominator() {
+    int getDenominator() {
         return this.denominator;
     }
 }
