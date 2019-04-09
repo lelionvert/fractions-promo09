@@ -22,4 +22,8 @@ public class Fraction {
                 "numerator=" + numerator +
                 '}';
     }
+
+    public int getNumerator() {
+        return this.numerator;
+    }
 }
