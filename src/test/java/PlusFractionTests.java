@@ -66,6 +66,5 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fractionZero);
 
         Assert.assertEquals(fraction, result);
-
     }
 }

@@ -8,9 +8,10 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public Fraction add(Fraction fraction) {
+    Fraction add(Fraction fraction) {
         if (fraction.numerator == 0)
             return this;
+
         return new Fraction(this.numerator + fraction.numerator, this.denominator);
     }
 
