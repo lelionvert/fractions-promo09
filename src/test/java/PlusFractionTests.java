@@ -92,4 +92,16 @@ public class PlusFractionTests {
         assertEquals(expected.getDenominator(), result.getDenominator());
     }
 
+    @Test
+    public void fraction_plus_fraction_with_different_denominator_triangulation() {
+        Fraction fraction1 = new Fraction(3, 5);
+        Fraction fraction2 = new Fraction(2, 7);
+
+        Fraction result = fraction1.add(fraction2);
+
+        Fraction expected = new Fraction(31, 35);
+        assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected.getDenominator(), result.getDenominator());
+    }
+
 }
