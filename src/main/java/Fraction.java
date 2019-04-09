@@ -11,12 +11,6 @@ public class Fraction {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Fraction fraction = (Fraction) obj;
-        return this.numerator == fraction.numerator;
-    }
-
-    @Override
     public String toString() {
         return "Fraction{" +
                 "numerator=" + numerator +

@@ -34,7 +34,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        Assert.assertEquals(fraction, result);
+        Assert.assertEquals(fraction.getNumerator(), result.getNumerator());
     }
 
     @Test
@@ -46,5 +46,4 @@ public class PlusFractionTests {
 
         Assert.assertEquals(expected.getNumerator(), result.getNumerator());
     }
-
 }
