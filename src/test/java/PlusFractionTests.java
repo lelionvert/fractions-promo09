@@ -56,7 +56,5 @@ public class PlusFractionTests {
 
         Assert.assertEquals(expected.getNumerator(), result.getNumerator());
         Assert.assertEquals(expected.getDenominator(), result.getDenominator());
-
     }
-
 }

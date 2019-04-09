@@ -3,9 +3,9 @@ public class Fraction {
     private final int numerator;
     private final int denominator;
 
-    public Fraction(int numerator, int i1) {
+    public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
-        denominator = i1;
+        this.denominator = denominator;
     }
 
     public Fraction add(Fraction fraction) {
@@ -16,6 +16,7 @@ public class Fraction {
     public String toString() {
         return "Fraction{" +
                 "numerator=" + numerator +
+                ", denominator=" + denominator +
                 '}';
     }
 
