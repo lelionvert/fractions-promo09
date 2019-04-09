@@ -18,7 +18,7 @@ public class PlusFractionTests {
     }
 
     @Test
-    public void zero_plus_fraction() {
+    public void zero_plus_integer() {
         Fraction fractionZero = new Fraction(0, 1);
         Fraction fraction = new Fraction(1, 1);
 
@@ -28,7 +28,7 @@ public class PlusFractionTests {
     }
 
     @Test
-    public void fraction_plus_zero() {
+    public void integer_plus_zero() {
         Fraction fractionZero = new Fraction(0, 1);
         Fraction fraction = new Fraction(1, 1);
 
