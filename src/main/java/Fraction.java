@@ -4,16 +4,14 @@ public class Fraction {
     private final int denominator;
 
     Fraction(final int numerator, final int denominator) {
-        int localNumerator = numerator;
-        int localDenominator = denominator;
+        int coefficient = 1;
 
         if (numerator < 0 && denominator < 0) {
-            localNumerator = -numerator;
-            localDenominator = -denominator;
+            coefficient = -1;
         }
-        int gcd = GCD.compute(localNumerator, localDenominator);
-        this.numerator = localNumerator / gcd;
-        this.denominator = localDenominator / gcd;
+        int gcd = GCD.compute(numerator, denominator);
+        this.numerator = coefficient * numerator / gcd;
+        this.denominator = coefficient * denominator / gcd;
     }
 
     Fraction add(Fraction fraction) {
