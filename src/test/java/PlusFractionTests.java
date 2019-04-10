@@ -133,4 +133,12 @@ public class PlusFractionTests {
 
         assertNotEquals(fraction1, fraction2);
     }
+
+    @Test
+    public void equals_with_fraction_zero() {
+        Fraction fraction1 = new Fraction(0, 8);
+        Fraction fraction2 = new Fraction(0, 9);
+
+        assertEquals(fraction1, fraction2);
+    }
 }
