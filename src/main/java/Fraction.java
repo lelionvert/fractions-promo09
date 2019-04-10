@@ -44,7 +44,6 @@ public class Fraction {
     public boolean equals(Object obj) {
         Fraction fraction = (Fraction) obj;
 
-        return this.numerator == fraction.getNumerator() && this.denominator == fraction.denominator;
-
+        return this.numerator == fraction.numerator && this.denominator == fraction.denominator;
     }
 }

@@ -125,10 +125,10 @@ public class PlusFractionTests {
     }
 
     @Test
-    public void equals_test() {
-        Fraction result = new Fraction(1, 3);
+    public void equals_fraction_with_same_value() {
+        Fraction fraction = new Fraction(1, 3);
+        Fraction fraction2 = new Fraction(1, 3);
 
-        Fraction expected = new Fraction(1, 3);
-        assertEquals(expected, result);
+        assertEquals(fraction2, fraction);
     }
 }
