@@ -8,7 +8,6 @@ public class Fraction {
             this.numerator = -1;
             this.denominator = 4;
             return;
-
         }
         int coefficient = 1;
 

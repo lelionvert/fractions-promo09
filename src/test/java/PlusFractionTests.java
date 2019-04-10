@@ -121,7 +121,7 @@ public class PlusFractionTests {
     }
 
     @Test
-    public void fraction_added_should_return_positive_one_if_equivalent() {
+    public void fraction_should_return_positive_one_if_equivalent() {
         Fraction fraction1 = new Fraction(-1, -4);
 
         Fraction expected = new Fraction(1, 4);
