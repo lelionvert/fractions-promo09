@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertTrue;
 
 public class PlusFractionTests {
@@ -16,7 +16,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fractionZero);
 
-        assertEquals(fractionZero, result);
+        assertThat(result).isEqualTo(fractionZero);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fraction);
 
-        assertEquals(fraction, result);
+        assertThat(result).isEqualTo(fraction);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        assertEquals(fraction, result);
+        assertThat(result).isEqualTo(fraction);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 1);
-        assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 3);
-        assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        assertEquals(fraction, result);
+        assertThat(result).isEqualTo(fraction);
     }
 
     @Test
@@ -76,7 +76,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fraction);
 
-        assertEquals(fraction, result);
+        assertThat(result).isEqualTo(fraction);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class PlusFractionTests {
         Fraction result = fraction1.add(fraction2);
 
         Fraction expected = new Fraction(5, 6);
-        assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -98,7 +98,7 @@ public class PlusFractionTests {
         Fraction result = fraction1.add(fraction2);
 
         Fraction expected = new Fraction(31, 35);
-        assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -107,7 +107,7 @@ public class PlusFractionTests {
         Fraction fraction = new Fraction(2, 6);
 
         Fraction expected = new Fraction(1, 3);
-        assertEquals(expected, fraction);
+        assertThat(fraction).isEqualTo(expected);
     }
 
     @Test
@@ -117,7 +117,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(7, 1);
-        assertEquals(expected, result);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -125,7 +125,7 @@ public class PlusFractionTests {
         Fraction fraction1 = new Fraction(-1, -4);
 
         Fraction expected = new Fraction(1, 4);
-        assertEquals(expected, fraction1);
+        assertThat(fraction1).isEqualTo(expected);
     }
 
     @Test
@@ -133,6 +133,14 @@ public class PlusFractionTests {
         Fraction fraction = new Fraction(1, -4);
 
         Fraction expected = new Fraction(-1, 4);
-        assertEquals(expected, fraction);
+        assertThat(fraction).isEqualTo(expected);
+    }
+
+    @Test
+    public void fraction_zero_is_not_negative() {
+        Fraction fraction = new Fraction(0, -1);
+
+        Fraction expected = new Fraction(0, 1);
+        assertThat(fraction).isEqualTo(expected);
     }
 }
