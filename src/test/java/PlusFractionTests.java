@@ -123,12 +123,9 @@ public class PlusFractionTests {
     @Test
     public void fraction_added_should_return_positive_one_if_equivalent() {
         Fraction fraction1 = new Fraction(-1, -4);
-        Fraction fraction2 = new Fraction(1, 4);
 
-        Fraction result = fraction1.add(fraction2);
-
-        Fraction expected = new Fraction(1, 2);
-        assertEquals(expected, result);
+        Fraction expected = new Fraction(1, 4);
+        assertEquals(expected, fraction1);
     }
 
 }
