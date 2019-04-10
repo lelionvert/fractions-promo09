@@ -3,15 +3,17 @@ public class Fraction {
     private final int numerator;
     private final int denominator;
 
-    Fraction(int numerator, int denominator) {
+    Fraction(final int numerator, final int denominator) {
+        int localNumerator = numerator;
+        int localDenominator = denominator;
 
         if (numerator < 0 && denominator < 0) {
-            numerator = -numerator;
-            denominator = -denominator;
+            localNumerator = -numerator;
+            localDenominator = -denominator;
         }
-        int gcd = GCD.compute(numerator, denominator);
-        this.numerator = numerator / gcd;
-        this.denominator = denominator / gcd;
+        int gcd = GCD.compute(localNumerator, localDenominator);
+        this.numerator = localNumerator / gcd;
+        this.denominator = localDenominator / gcd;
     }
 
     Fraction add(Fraction fraction) {
