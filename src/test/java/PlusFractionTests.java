@@ -123,4 +123,12 @@ public class PlusFractionTests {
         assertEquals(expected.getNumerator(), result.getNumerator());
         assertEquals(expected.getDenominator(), result.getDenominator());
     }
+
+    @Test
+    public void equals_test() {
+        Fraction result = new Fraction(1, 3);
+
+        Fraction expected = new Fraction(1, 3);
+        assertEquals(expected, result);
+    }
 }

@@ -39,4 +39,12 @@ public class Fraction {
     int getDenominator() {
         return this.denominator;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Fraction fraction = (Fraction) obj;
+
+        return this.numerator == fraction.getNumerator() && this.denominator == fraction.denominator;
+
+    }
 }
