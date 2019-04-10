@@ -16,7 +16,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fractionZero);
 
-        assertEquals(fractionZero.getNumerator(), result.getNumerator());
+        assertEquals(fractionZero, result);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class PlusFractionTests {
 
         Fraction result = fractionZero.add(fraction);
 
-        assertEquals(fraction.getNumerator(), result.getNumerator());
+        assertEquals(fraction, result);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class PlusFractionTests {
 
         Fraction result = fraction.add(fractionZero);
 
-        assertEquals(fraction.getNumerator(), result.getNumerator());
+        assertEquals(fraction, result);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 1);
-        assertEquals(expected.getNumerator(), result.getNumerator());
+        assertEquals(expected, result);
     }
 
     @Test
@@ -56,8 +56,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(2, 3);
-        assertEquals(expected.getNumerator(), result.getNumerator());
-        assertEquals(expected.getDenominator(), result.getDenominator());
+        assertEquals(expected, result);
     }
 
     @Test
@@ -88,8 +87,7 @@ public class PlusFractionTests {
         Fraction result = fraction1.add(fraction2);
 
         Fraction expected = new Fraction(5, 6);
-        assertEquals(expected.getNumerator(), result.getNumerator());
-        assertEquals(expected.getDenominator(), result.getDenominator());
+        assertEquals(expected, result);
     }
 
     @Test
@@ -100,8 +98,7 @@ public class PlusFractionTests {
         Fraction result = fraction1.add(fraction2);
 
         Fraction expected = new Fraction(31, 35);
-        assertEquals(expected.getNumerator(), result.getNumerator());
-        assertEquals(expected.getDenominator(), result.getDenominator());
+        assertEquals(expected, result);
     }
 
     @Test
@@ -109,8 +106,7 @@ public class PlusFractionTests {
         Fraction fraction = new Fraction(2, 6);
 
         Fraction expected = new Fraction(1, 3);
-        assertEquals(expected.getNumerator(), fraction.getNumerator());
-        assertEquals(expected.getDenominator(), fraction.getDenominator());
+        assertEquals(expected, fraction);
     }
 
     @Test
@@ -120,8 +116,7 @@ public class PlusFractionTests {
         Fraction result = fraction.add(fraction);
 
         Fraction expected = new Fraction(7, 1);
-        assertEquals(expected.getNumerator(), result.getNumerator());
-        assertEquals(expected.getDenominator(), result.getDenominator());
+        assertEquals(expected, result);
     }
 
     @Test
