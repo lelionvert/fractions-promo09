@@ -102,7 +102,8 @@ public class PlusFractionTests {
     }
 
     @Test
-    public void simplify() {
+    public void simplify
+            () {
         Fraction fraction = new Fraction(2, 6);
 
         Fraction expected = new Fraction(1, 3);
