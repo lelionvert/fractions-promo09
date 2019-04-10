@@ -32,14 +32,6 @@ public class Fraction {
                 '}';
     }
 
-    int getNumerator() {
-        return this.numerator;
-    }
-
-    int getDenominator() {
-        return this.denominator;
-    }
-
     @Override
     public boolean equals(Object obj) {
         Fraction fraction = (Fraction) obj;
