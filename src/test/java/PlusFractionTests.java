@@ -128,4 +128,11 @@ public class PlusFractionTests {
         assertEquals(expected, fraction1);
     }
 
+    @Test
+    public void negative_fraction_should_have_negative_numerator() {
+        Fraction fraction = new Fraction(1, -4);
+
+        Fraction expected = new Fraction(-1, 4);
+        assertEquals(expected, fraction);
+    }
 }
