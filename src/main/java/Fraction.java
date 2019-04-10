@@ -4,6 +4,11 @@ public class Fraction {
     private final int denominator;
 
     Fraction(int numerator, int denominator) {
+
+        if (numerator < 0 && denominator < 0) {
+            numerator = -numerator;
+            denominator = -denominator;
+        }
         int gcd = GCD.compute(numerator, denominator);
         this.numerator = numerator / gcd;
         this.denominator = denominator / gcd;
