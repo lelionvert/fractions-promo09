@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class PlusFractionTests {
 
@@ -125,5 +124,13 @@ public class PlusFractionTests {
         Fraction fraction2 = new Fraction(1, 3);
 
         assertEquals(fraction2, fraction);
+    }
+
+    @Test
+    public void equals_with_different_values() {
+        Fraction fraction1 = new Fraction(1, 2);
+        Fraction fraction2 = new Fraction(1, 3);
+
+        assertNotEquals(fraction1, fraction2);
     }
 }
