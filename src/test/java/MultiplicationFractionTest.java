@@ -44,12 +44,10 @@ public class MultiplicationFractionTest {
     @Test
     public void two_times_one_return_one() {
         Fraction fractionOne = new Fraction(1, 1);
-        Fraction fraction2 = new Fraction(2, 1);
+        Fraction fraction = new Fraction(2, 1);
 
-        Fraction result = fraction2.times(fractionOne);
+        Fraction result = fraction.times(fractionOne);
 
-        assertThat(result).isEqualTo(fraction2);
+        assertThat(result).isEqualTo(fraction);
     }
-
-
 }
