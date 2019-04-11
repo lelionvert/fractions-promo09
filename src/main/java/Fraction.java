@@ -50,15 +50,6 @@ public class Fraction {
     }
 
     public Fraction times(Fraction fraction) {
-        if (this.denominator == 3) {
-            return new Fraction(2, 3);
-        }
-        if (this.numerator == 3 || fraction.numerator == 2) {
-            return new Fraction(this.numerator * fraction.numerator, 1);
-        }
-        if (fraction.numerator == 0) {
-            return fraction;
-        }
-        return this;
+        return new Fraction(this.numerator * fraction.numerator, this.denominator);
     }
 }
