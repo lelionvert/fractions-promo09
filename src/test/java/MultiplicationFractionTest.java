@@ -40,4 +40,16 @@ public class MultiplicationFractionTest {
 
         assertThat(result).isEqualTo(fractionOne);
     }
+
+    @Test
+    public void two_times_one_return_one() {
+        Fraction fractionOne = new Fraction(1, 1);
+        Fraction fraction2 = new Fraction(2, 1);
+
+        Fraction result = fraction2.times(fractionOne);
+
+        assertThat(result).isEqualTo(fraction2);
+    }
+
+
 }
