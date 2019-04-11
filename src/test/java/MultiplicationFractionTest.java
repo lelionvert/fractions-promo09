@@ -60,4 +60,5 @@ public class MultiplicationFractionTest {
         Fraction expected = new Fraction(4, 1);
         assertThat(result).isEqualTo(expected);
     }
+
 }
