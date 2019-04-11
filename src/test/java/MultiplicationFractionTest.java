@@ -61,4 +61,14 @@ public class MultiplicationFractionTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    @Test
+    public void fraction_times_two_returns_fraction() {
+        Fraction fraction = new Fraction(1, 3);
+        Fraction fraction2 = new Fraction(2, 1);
+
+        Fraction result = fraction.times(fraction2);
+
+        Fraction expected = new Fraction(2, 3);
+        assertThat(result).isEqualTo(expected);
+    }
 }
