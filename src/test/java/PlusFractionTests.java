@@ -145,7 +145,7 @@ public class PlusFractionTests {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void fraction_with_denominator_equal_zero() {
+    public void fraction_with_denominator_equal_zero_throw_illegal_argument_exception() {
         Fraction fraction = new Fraction(1, 0);
     }
 }

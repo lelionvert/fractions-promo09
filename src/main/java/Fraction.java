@@ -5,8 +5,10 @@ public class Fraction {
 
 
     Fraction(final int numerator, final int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator can not be equal to zero");
+        }
 
-        if (denominator == 0) throw new IllegalArgumentException("Denominator can not be equal to zero");
         int coefficient = 1;
 
         if (denominator < 0) {
