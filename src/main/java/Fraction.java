@@ -48,4 +48,9 @@ public class Fraction {
 
         return this.numerator == fraction.numerator && this.denominator == fraction.denominator;
     }
+
+    public Fraction times(Fraction fraction) {
+
+        return new Fraction(0, 1);
+    }
 }
