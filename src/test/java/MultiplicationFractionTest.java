@@ -50,4 +50,14 @@ public class MultiplicationFractionTest {
 
         assertThat(result).isEqualTo(fraction);
     }
+
+    @Test
+    public void two_times_two_return_four() {
+        Fraction fraction = new Fraction(2, 1);
+
+        Fraction result = fraction.times(fraction);
+
+        Fraction expected = new Fraction(4, 1);
+        assertThat(result).isEqualTo(expected);
+    }
 }
