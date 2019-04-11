@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertTrue;
 
-public class PlusFractionTests {
+public class PlusFractionTest {
 
     @Test
     public void jordan_s_contribution() {

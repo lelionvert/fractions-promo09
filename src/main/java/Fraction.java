@@ -50,7 +50,6 @@ public class Fraction {
     }
 
     public Fraction times(Fraction fraction) {
-
-        return new Fraction(0, 1);
+        return this;
     }
 }
