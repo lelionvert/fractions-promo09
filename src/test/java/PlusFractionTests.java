@@ -143,4 +143,9 @@ public class PlusFractionTests {
         Fraction expected = new Fraction(0, 1);
         assertThat(fraction).isEqualTo(expected);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void fraction_with_denominator_equal_zero() {
+        Fraction fraction = new Fraction(1, 0);
+    }
 }
