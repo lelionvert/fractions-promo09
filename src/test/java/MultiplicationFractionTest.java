@@ -31,4 +31,13 @@ public class MultiplicationFractionTest {
 
         assertThat(result).isEqualTo(fractionZero);
     }
+
+    @Test
+    public void one_times_one_return_one() {
+        Fraction fractionOne = new Fraction(1, 1);
+
+        Fraction result = fractionOne.times(fractionOne);
+
+        assertThat(result).isEqualTo(fractionOne);
+    }
 }
