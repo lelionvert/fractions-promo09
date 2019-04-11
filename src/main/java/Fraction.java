@@ -50,6 +50,9 @@ public class Fraction {
     }
 
     public Fraction times(Fraction fraction) {
+        if (fraction.numerator == 0) {
+            return fraction;
+        }
         return this;
     }
 }

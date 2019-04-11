@@ -21,4 +21,14 @@ public class MultiplicationFractionTest {
 
         assertThat(result).isEqualTo(fractionZero);
     }
+
+    @Test
+    public void one_times_zero_return_zero() {
+
+        Fraction fractionZero = new Fraction(0, 1);
+        Fraction fraction = new Fraction(1, 1);
+
+        Fraction result = fraction.times(fractionZero);
+        assertThat(result).isEqualTo(fractionZero);
+    }
 }
